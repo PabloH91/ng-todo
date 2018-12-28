@@ -1,6 +1,14 @@
 <div class="container">
-  <h1>Tasks</h1>
-  <p>
-      task-list works!
-    </p>
+  <div class="title-container">
+    <h1>Tasks</h1>
+    <p>You currently have {{tasks.length}} pending tasks:</p>
+  </div>
+  <div class="list-container row">
+    <div *ngFor="let task of tasks" class="task-container col-6">
+      <div class="task-inner-container" [ngClass]="{high: task.urgency === 'high', medium: task.urgency === 'medium', low: task.urgency === 'low'}">
+        <h4 class="task-name">{{task.name}} <span class="task-urgency">({{task.urgency}})</span></h4>
+        <p>{{task.description}}</p>
+      </div>
+    </div>
+  </div>
 </div>

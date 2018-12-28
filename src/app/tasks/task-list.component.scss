@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+.list-container {
+  .task-container {
+    .task-inner-container {
+      // padding: 5px;
+
+      &.high {
+        background-color: darken($froly, 10%);
+      }
+      &.medium {
+        background-color: $froly;
+      }
+      &.low {
+        background-color: lighten($froly, 10%);
+      }
+
+      .task-name {
+        font-weight: bold;
+        .task-urgency {
+          font-size: 0.4em;
+        }
+      }
+    }
+  }
+}
