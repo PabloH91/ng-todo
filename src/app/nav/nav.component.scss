@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+.navbar {
+
+  a {
+    color: $ming;
+
+    &:hover,
+    &.active {
+      color: $froly;
+    }
+  }
+}

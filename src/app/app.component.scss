@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+.main-container {
+  background-color: $white;
+
+  .body-content {
+    margin-bottom: 30px;
+  }
+}
