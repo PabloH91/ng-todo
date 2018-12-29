@@ -1,6 +1,9 @@
 <div class="container">
   <h1>Task Details</h1>
-  <p>
-    task-detail works!
-  </p>
+  <div class="details-container" *ngIf="task">
+    <h3>Task #{{task.id}}: {{task.name}}</h3>
+    <p>{{task.urgency}} priority</p>
+    <p>{{task.description}}</p>
+  </div>
+  <a [routerLink]="['/tasks']" routerLinkActive="router-link-active">&lt; back</a>
 </div>

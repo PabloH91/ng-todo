@@ -4,7 +4,7 @@ import { TaskListComponent } from './task-list.component';
 import { TaskDetailComponent } from './task-detail.component';
 
 const routes: Routes = [
-  { path: '', component: TaskListComponent },
+  { path: '', component: TaskListComponent, pathMatch: 'full' },
   { path: ':id', component: TaskDetailComponent }
 ];
 

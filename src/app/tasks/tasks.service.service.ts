@@ -41,7 +41,7 @@ export class TasksService {
   getTasks(): Task[] {
     return tasks;
   }
-  getTask(taskId: number): Task[] {
-    return tasks.filter(task => task.id === taskId);
+  getTask(taskId: number): Task {
+    return tasks.find(task => task.id === taskId);
   }
 }

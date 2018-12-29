@@ -5,8 +5,11 @@
   </div>
   <div class="list-container row">
     <div *ngFor="let task of tasks" class="task-container col-6">
-      <div class="task-inner-container" [ngClass]="{high: task.urgency === 'high', medium: task.urgency === 'medium', low: task.urgency === 'low'}">
-        <h4 class="task-name">{{task.name}} <span class="task-urgency">({{task.urgency}})</span></h4>
+      <div class="task-inner-container"
+        [ngClass]="{high: task.urgency === 'high', medium: task.urgency === 'medium', low: task.urgency === 'low'}"
+        [routerLink]="[task.id]" routerLinkActive="active">
+        <h4 class="task-name">{{task.name}}</h4>
+        <p class="task-urgency">{{task.urgency}} priority</p>
         <p>{{task.description}}</p>
       </div>
     </div>
