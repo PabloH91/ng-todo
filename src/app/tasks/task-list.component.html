@@ -1,6 +1,7 @@
 <div class="container">
   <div class="title-container">
     <h1>Tasks</h1>
+    <a [routerLink]="['new']" routerLinkActive="router-link-active">Create new task &gt;</a>
     <p>You currently have {{tasks.length}} pending tasks:</p>
   </div>
   <div class="list-container row">
