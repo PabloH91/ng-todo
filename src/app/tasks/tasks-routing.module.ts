@@ -5,8 +5,6 @@ import { TaskDetailComponent } from './task-detail.component';
 import { CreateTaskComponent } from './create-task.component';
 import { TaskRouteActivatorService } from './task-route-activator.service';
 
-// todo: add guard to id route
-// todo: create route for 'add task'
 const routes: Routes = [
   { path: 'new', component: CreateTaskComponent },
   { path: ':id', component: TaskDetailComponent, canActivate: [TaskRouteActivatorService] },
