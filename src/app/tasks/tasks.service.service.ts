@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Task } from './task';
+import { ITask } from './task';
 
-const tasks: Task[] = [
+const tasks: ITask[] = [
   {
     id: 1,
     name: 'finish to-do app',
@@ -38,10 +38,10 @@ const tasks: Task[] = [
 export class TasksService {
   constructor() { }
 
-  getTasks(): Task[] {
+  getTasks(): ITask[] {
     return tasks;
   }
-  getTask(taskId: number): Task {
+  getTask(taskId: number): ITask {
     return tasks.find(task => task.id === taskId);
   }
 }

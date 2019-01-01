@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TasksService } from './tasks.service.service';
-import { Task } from './task';
+import { ITask } from './task';
 
 @Component({
   selector: 'app-task-detail',
@@ -9,7 +9,7 @@ import { Task } from './task';
   styleUrls: ['./task-detail.component.scss']
 })
 export class TaskDetailComponent implements OnInit {
-  task: Task;
+  task: ITask;
   constructor(private router: ActivatedRoute, private tasksService: TasksService) { }
 
   ngOnInit() {
