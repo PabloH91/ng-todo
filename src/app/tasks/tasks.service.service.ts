@@ -44,4 +44,7 @@ export class TasksService {
   getTask(taskId: number): ITask {
     return tasks.find(task => task.id === taskId);
   }
+  saveTask(task: ITask) {
+    tasks.push(task);
+  }
 }
